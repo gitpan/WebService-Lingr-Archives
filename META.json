@@ -1,0 +1,67 @@
+{
+   "abstract" : "load archived messages from lingr.com",
+   "author" : [
+      "Toshio Ito <toshioito@cpan.org>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.132140",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "WebService-Lingr-Archives",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "eg",
+         "inc"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Exporter" : "0",
+            "List::Util" : "0",
+            "Module::Build::Pluggable::CPANfile" : "0.02",
+            "Test::Exception" : "0.31",
+            "Test::MockObject" : "1.20120301",
+            "Test::More" : "0.98",
+            "Try::Tiny" : "0.16",
+            "lib" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.40",
+            "Module::Build::Pluggable" : "0.09",
+            "Module::Build::Pluggable::CPANfile" : "0.02"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "Furl" : "2.18",
+            "JSON" : "2.53",
+            "URI" : "1.59",
+            "perl" : "5.010"
+         }
+      }
+   },
+   "provides" : {
+      "WebService::Lingr::Archives" : {
+         "file" : "lib/WebService/Lingr/Archives.pm",
+         "version" : "0.01"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "repository" : {
+         "url" : "git://github.com/debug-ito/WebService-Lingr-Archives.git"
+      }
+   },
+   "version" : "0.01"
+}
