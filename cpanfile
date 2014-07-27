@@ -1,6 +1,5 @@
-
 requires 'perl', '5.010';
-requires 'Furl', '2.18';
+requires 'LWP::UserAgent', '0';
 requires 'JSON', '2.53';
 requires 'URI',  '1.59';
 requires "Carp";
@@ -16,7 +15,7 @@ on test => sub {
 };
 
 on 'configure' => sub {
-    requires 'Module::Build::Pluggable',           '0.09';
+    requires 'Module::Build', '0.42';
+    requires 'Module::Build::Pluggable', '0.09';
     requires 'Module::Build::Pluggable::CPANfile', '0.02';
 };
-

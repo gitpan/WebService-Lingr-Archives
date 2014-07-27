@@ -3,11 +3,11 @@ use strict;
 use warnings;
 use 5.10.0;
 use Carp;
-use Furl;
+use LWP::UserAgent;
 use URI;
 use JSON qw(decode_json);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my ($class, %args) = @_;
@@ -19,7 +19,7 @@ sub new {
     }
     my $self = bless {
         user_agent => $args{user_agent} // do {
-            my $ua = Furl->new;
+            my $ua = LWP::UserAgent->new;
             $ua->env_proxy();
             $ua;
         },
@@ -141,7 +141,7 @@ Lingr App key. Although it's not required, you can register your app in L<http:/
 
 API base URL.
 
-=item C<user_agent> => OBJECT (optional, default: L<Furl> with env_proxy() called)
+=item C<user_agent> => OBJECT (optional, default: L<LWP::UserAgent> with env_proxy() called)
 
 HTTP UserAgent object to access the API.
 

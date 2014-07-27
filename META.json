@@ -4,13 +4,13 @@
       "Toshio Ito <toshioito@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.132140",
+   "generated_by" : "Module::Build version 0.4205",
    "license" : [
       "perl_5"
    ],
    "meta-spec" : {
-      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : "2"
+      "url" : "https://metacpan.org/pod/CPAN::Meta::Spec",
+      "version" : 2
    },
    "name" : "WebService-Lingr-Archives",
    "no_index" : {
@@ -19,49 +19,54 @@
          "xt",
          "eg",
          "inc"
+      ],
+      "file" : [
+         "README.pod"
       ]
    },
    "prereqs" : {
       "build" : {
          "requires" : {
+            "Module::Build::Pluggable::CPANfile" : "0.05"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.42",
+            "Module::Build::Pluggable" : "0.09",
+            "Module::Build::Pluggable::CPANfile" : "0.05"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "JSON" : "2.53",
+            "LWP::UserAgent" : "0",
+            "URI" : "1.59",
+            "perl" : "5.010"
+         }
+      },
+      "test" : {
+         "requires" : {
             "Exporter" : "0",
             "List::Util" : "0",
-            "Module::Build::Pluggable::CPANfile" : "0.02",
             "Test::Exception" : "0.31",
             "Test::MockObject" : "1.20120301",
             "Test::More" : "0.98",
             "Try::Tiny" : "0.16",
             "lib" : "0"
          }
-      },
-      "configure" : {
-         "requires" : {
-            "Module::Build" : "0.40",
-            "Module::Build::Pluggable" : "0.09",
-            "Module::Build::Pluggable::CPANfile" : "0.02"
-         }
-      },
-      "runtime" : {
-         "requires" : {
-            "Carp" : "0",
-            "Furl" : "2.18",
-            "JSON" : "2.53",
-            "URI" : "1.59",
-            "perl" : "5.010"
-         }
-      }
-   },
-   "provides" : {
-      "WebService::Lingr::Archives" : {
-         "file" : "lib/WebService/Lingr/Archives.pm",
-         "version" : "0.01"
       }
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/debug-ito/WebService-Lingr-Archives/issues"
+      },
       "repository" : {
-         "url" : "git://github.com/debug-ito/WebService-Lingr-Archives.git"
+         "url" : "git://github.com/debug-ito/WebService-Lingr-Archives.git",
+         "web" : "https://github.com/debug-ito/WebService-Lingr-Archives"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
