@@ -5,7 +5,6 @@ author:
 build_requires:
   Exporter: '0'
   List::Util: '0'
-  Module::Build::Pluggable::CPANfile: '0.05'
   Test::Exception: '0.31'
   Test::MockObject: '1.20120301'
   Test::More: '0.98'
@@ -13,8 +12,7 @@ build_requires:
   lib: '0'
 configure_requires:
   Module::Build: '0.42'
-  Module::Build::Pluggable: '0.09'
-  Module::Build::Pluggable::CPANfile: '0.05'
+  Module::Build::Prereqs::FromCPANfile: '0.02'
 dynamic_config: 1
 generated_by: 'Module::Build version 0.4205, CPAN::Meta::Converter version 2.141170'
 license: perl
@@ -39,4 +37,4 @@ requires:
 resources:
   bugtracker: https://github.com/debug-ito/WebService-Lingr-Archives/issues
   repository: git://github.com/debug-ito/WebService-Lingr-Archives.git
-version: '0.02'
+version: '0.03'
